@@ -101,6 +101,12 @@ so that I can start creating, organizing, and tracking events.
      Then a new organizer account is not created
       And the system warns me that I need to provide a first name
 
+    Examples: 
+      | email                         |
+      | helen.m.lin@mail.mcgill.ca    |
+      | helenthesunflower@gmail.com   |
+      | helenthesunflower@outlook.com |
+
   Scenario Outline: (Error flow) Create a new organizer account with invalid (empty) last name.
     Given the system does not contain an account associated with <email>
      When I choose to create a new organizer account
@@ -110,3 +116,9 @@ so that I can start creating, organizing, and tracking events.
       And I provide no last name
      Then a new organizer account is not created
       And the system warns me that I need to provide a last name
+    
+    Examples: 
+      | email                         |
+      | helen.m.lin@mail.mcgill.ca    |
+      | helenthesunflower@gmail.com   |
+      | helenthesunflower@outlook.com |
